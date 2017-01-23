@@ -1,56 +1,47 @@
-# K is the kernel matrix which is nbyn, n being the number of data points
-# candidate indicies is an array of 0 to n-1, you might want to use a subset instead. TO CONSIDER
+##############################################################################################################################
+# Function to select prototypes
+# K_subset is a subset of the kernel matrix of dimensions equal to  pontential prototypes (m+1) x (number of data so far) 
+# selectedprotos: prototypes already selected
+# m : number of prototypes to be selected
+# is_K_sparse:  True means K is the pre-computed  csc sparse matrix? False means it is a dense matrix.
+# RETURNS: indices selected as prototypes
+# n = number of cols of the kernel matrix in our case is (n) cause you never have the kernel matrix computed for 
+# the complete dataset
+# candidates2 is a vector with the indices for the criticism expressed with respect to the overall dataset
+# candidates_row is othe set of indices wrt to row of the K_subset
+#############################################################################################################################
+
 import numpy as np
 
-def greedy_select_protos_online(K, candidate_indices, m, is_K_sparse=False):
+def greedy_select_protos_online(K_subset, selectedprotos, m):
 
-    if len(candidate_indices) != np.shape(K)[0]:
-        K = K[:,candidate_indices][candidate_indices,:]
+    n = np.shape(K_subset)[1]  #number of columns in the rectangular matrix    
 
-    n = len(candidate_indices)
+    rowsum = 2*np.sum(K_subset, axis=1) / n
 
-    # colsum = np.array(K.sum(0)).ravel() # same as rowsum
-    if is_K_sparse:
-        colsum = 2*np.array(K.sum(0)).ravel() / n
-    else:
-        colsum = 2*np.sum(K, axis=0) / n
-
-    selected = np.array([], dtype=int)
+    candidates2 = np.append(selectedprotos, n-1)  # indecides of the previous prototypes group + the new observation
+    candidates_row = range(m+1)    
+        
+    selected = np.array([], dtype=int) #vector to store the selected prototypes
     value = np.array([])
-    for i in range(m):
+    for i in range(m+1):
         maxx = -sys.float_info.max
         argmax = -1
-        candidates = np.setdiff1d(range(n), selected)
+        candidates = np.setdiff1d(candidates_row, selected)
 
-        s1array = colsum[candidates]
+        s1array = rowsum[candidates]
         if len(selected) > 0:
-            temp = K[selected, :][:, candidates]
-            if is_K_sparse:
-                # s2array = temp.sum(0) *2
-                s2array = temp.sum(0) * 2 + K.diagonal()[candidates]
-
-            else:
-                s2array = np.sum(temp, axis=0) *2 + np.diagonal(K)[candidates]
-
+            temp = K_subset[candidates, :][:, candidates2[selected]]
+            K_subset2 = K_subset[candidates,:][:,candidates2[candidates]]
+            s2array = np.sum(temp, axis=1) *2 + np.diagonal(K_subset2)
             s2array = s2array/(len(selected) + 1)
-
             s1array = s1array - s2array
 
         else:
-            if is_K_sparse:
-                s1array = s1array - np.log(np.abs(K.diagonal()[candidates]))
-            else:
-                s1array = s1array - np.log(np.abs(np.diagonal(K)[candidates]))
+            K_subset2 = K_subset[candidates_row,:][:,candidates2]
+            s1array = s1array - np.log(np.abs(np.diagonal(K_subset2)))
 
         argmax = candidates[np.argmax(s1array)]
-        # print "max %f" %np.max(s1array)
-
         selected = np.append(selected, argmax)
-        # value = np.append(value,maxx)
-        KK = K[selected, :][:, selected]
-        if is_K_sparse:
-            KK = KK.todense()
 
-        inverse_of_prev_selected = np.linalg.inv(KK)  # shortcut
-
-    return candidate_indices[selected]
+    return candidates2[selected]
