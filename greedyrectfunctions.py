@@ -1,6 +1,6 @@
 # K is the kernel matrix which is nbyn, n being the number of data points
 # candidate indicies is an array of 0 to n-1, you might want to use a subset instead. TO CONSIDER
-def greedy_select_protos(K, candidate_indices, m, is_K_sparse=False):
+def greedy_rect_select_protos(K, candidate_indices, m, is_K_sparse=False):
 
     if len(candidate_indices) != np.shape(K)[0]:
         K = K[:,candidate_indices][candidate_indices,:]
