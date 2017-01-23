@@ -53,9 +53,18 @@ def protonline(K_subset, selectedprotos, m):
             K_subset2 = K_subset[candidates_row,:][:,candidates2]
             print "k_subset2"
             print K_subset2
+            print "s1"
+            print s1array
+            print "diagonal K_subset2"
+            print np.abs(np.diagonal(K_subset2))
             s1array = s1array - np.log(np.abs(np.diagonal(K_subset2)))
             print "new s1"
             print s1array
+            print "altern comp s1"
+            print np.log(np.abs(np.diagonal(K_subset2)))
+            s1array = np.subtract(s1array,np.asmatrix(np.log(np.abs(np.diagonal(K_subset2)))))
+            print type(s1array)
+            print type(np.log(np.abs(np.diagonal(K_subset2))))
             print K_subset2.shape
             print s1array.shape
         
