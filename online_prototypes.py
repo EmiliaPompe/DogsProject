@@ -12,6 +12,7 @@
 #############################################################################################################################
 
 import numpy as np
+#import sys
 
 def greedy_select_protos_online(K_subset, selectedprotos, m):
 
@@ -19,28 +20,34 @@ def greedy_select_protos_online(K_subset, selectedprotos, m):
 
     rowsum = 2*np.sum(K_subset, axis=1) / n
 
-    candidates2 = np.append(selectedprotos, n-1)  # indecides of the previous prototypes group + the new observation
+    candidates2 = np.append(selectedprotos, n)  # indecides of the previous prototypes group + the new observation
     candidates_row = range(m+1)    
         
     selected = np.array([], dtype=int) #vector to store the selected prototypes
     value = np.array([])
     for i in range(m+1):
-        maxx = -sys.float_info.max
+        #maxx = -sys.float_info.max
         argmax = -1
         candidates = np.setdiff1d(candidates_row, selected)
 
         s1array = rowsum[candidates]
+        
+        print s1array.shape
+        
         if len(selected) > 0:
             temp = K_subset[candidates, :][:, candidates2[selected]]
             K_subset2 = K_subset[candidates,:][:,candidates2[candidates]]
             s2array = np.sum(temp, axis=1) *2 + np.diagonal(K_subset2)
             s2array = s2array/(len(selected) + 1)
             s1array = s1array - s2array
-
+        print s1array.shape
+        
         else:
             K_subset2 = K_subset[candidates_row,:][:,candidates2]
             s1array = s1array - np.log(np.abs(np.diagonal(K_subset2)))
-
+        
+        print s1array.shape 
+        
         argmax = candidates[np.argmax(s1array)]
         selected = np.append(selected, argmax)
 

@@ -14,6 +14,7 @@
 ##############################################################################################################################
 
 import numpy as np
+#import sys
 
 
 def greedy_select_criticism_online(K_subset, selectedprotos, selectedcritic, c, reg='logdet'):
@@ -34,7 +35,7 @@ def greedy_select_criticism_online(K_subset, selectedprotos, selectedcritic, c, 
     rowsum = np.sum(K_subset, axis=1)/n
 
     for i in range(c+1):
-        maxx = -sys.float_info.max
+        #maxx = -sys.float_info.max
         argmax = -1
         candidates = np.setdiff1d(candidates_row, selected) #wrt to row of the K_subset
 
