@@ -2,7 +2,7 @@ from __future__ import division  #So that when we divide by integers we gegt a f
 import numpy as np
 
 
-def online_loss_max(stored_phis, full_phi_sum, proto_phi_sum, prototype_indices, criticism_indices, n, M, greedy = False):
+def online_loss_max(stored_phis, full_phi_sum, proto_phi_sum, prototype_indices, criticism_indices, n, M):
     #ONLINE_LOSS_MAX maximizes L(C) online.
     #Here we are adding x_n and assume that stored_phis and full_phi_sum have been updated to include x_new: the new data point.
 

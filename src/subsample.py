@@ -22,6 +22,8 @@ class Subsampler(object):
         self._subset_mean_phi = self._each_phi.mean(0)           #new_hat^n_M
         self.M = len(points)                #Initially M=N as you have the same number of prototypes as data in total
         self.N = len(points)
+        
+        #The below means that it doesn't normalize things and so computes the usual sum.
         self._log_normalizer = initial_log_normalizer if initial_log_normalizer is not None else np.log(self.M)
         self.which = np.arange(self.M)
         
@@ -49,6 +51,8 @@ class Subsampler(object):
         #print self._compute_phi(np.array([candidate]))
         #print 'inbetween'
         #print next_phi
+        
+        #Note, the default is that log_weight = 0, in which case this is just the usual mean
         updated_normalizer = log_sum_exp(self._log_normalizer, log_weight)
         weight_next = np.exp(log_weight - updated_normalizer)
         weight_prev = np.exp(self._log_normalizer - updated_normalizer)
