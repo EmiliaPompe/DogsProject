@@ -103,31 +103,31 @@ def protonline(K_subset, selectedprotos, m):
             #print s1array.shape
             #print type(s1array)
         
-        print "we are out of the if-else"
-        print "i"
-        print i 
-        print "s1 array"
-        print s1array
+        #print "we are out of the if-else"
+        #print "i"
+        #print i 
+        #print "s1 array"
+        #print s1array
         #print s1array.shape
         #print type(s1array)
-        print "candidates"
-        print candidates
+        #print "candidates"
+        #print candidates
         #print candidates.shape
         #print type(candidates2)
         #print np.argmax(s1array)
         argmax = candidates[np.argmax(s1array)]
-        print "argmax"
-        print argmax
+        #print "argmax"
+        #print argmax
         selected = np.append(selected, argmax)
-        print "selected"
-        print selected 
+        #print "selected"
+        #print selected 
         #print selected.shape
         #print type(selected)
-        print "candidates2"
-        print candidates2 
-        print candidates2.shape
-        print type(candidates2)
+        #print "candidates2"
+        #print candidates2 
+        #print candidates2.shape
+        #print type(candidates2)
 
         
-    print candidates2[selected].shape
+    #print candidates2[selected].shape
     return candidates2[selected]
