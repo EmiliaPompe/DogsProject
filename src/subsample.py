@@ -16,7 +16,7 @@ class Subsampler(object):
     
     def __init__(self, points, phi, initial_log_normalizer=None, logging=True, ground_truth_phi=None, test_fns=None):
         self.points = np.array(points)  #Puts the points in an np array
-        self._compute_phi = phi         #Sets the compute_phi attribute to phi_hat
+        self._compute_phi = phi         #Sets the compute_phi attribute to phi_hat the function!
         self._each_phi = phi(points)     #phi_hat computed on the prototypes ie the first M
         self._full_mean_phi = self._each_phi.mean(0)             #mu_hat_n
         self._subset_mean_phi = self._each_phi.mean(0)           #new_hat^n_M
