@@ -18,7 +18,11 @@ class Subsampler(object):
         self.points = np.array(points)  #Puts the points in an np array
         self._compute_phi = phi         #Sets the compute_phi attribute to phi_hat the function!
         self._each_phi = phi(points)     #phi_hat computed on the prototypes ie the first M
-        self._full_mean_phi = self._each_phi.mean(0)             #mu_hat_n
+        self._full_mean_phi = self._each_phi.mean(0)            #mu_hat_n
+        
+        self.total_sum_test = np.sum(self._each_phi, axis = 0)
+        self.sample_sum_test = np.sum(self._each_phi, axis = 0)
+        
         self._subset_mean_phi = self._each_phi.mean(0)           #new_hat^n_M
         self.M = len(points)                #Initially M=N as you have the same number of prototypes as data in total
         self.N = len(points)
@@ -56,6 +60,9 @@ class Subsampler(object):
         updated_normalizer = log_sum_exp(self._log_normalizer, log_weight)
         weight_next = np.exp(log_weight - updated_normalizer)
         weight_prev = np.exp(self._log_normalizer - updated_normalizer)
+        
+        self.total_sum_test += next_phi
+        
         self._full_mean_phi[:] = weight_next*next_phi + weight_prev*self._full_mean_phi    #Eqn (19) from notes
         self._log_normalizer = updated_normalizer
         self.N += 1
@@ -66,6 +73,9 @@ class Subsampler(object):
         accepted = best_ix is not None
         if accepted:
             self._subset_mean_phi += (next_phi - self._each_phi[best_ix])/self.M     #Eq (21)
+            
+            self.sample_sum_test += next_phi - self._each_phi[best_ix]
+            
             self._each_phi[best_ix] = next_phi
             self.points[best_ix] = candidate
             self.which[best_ix] = self.N-1
