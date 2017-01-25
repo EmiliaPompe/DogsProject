@@ -5,9 +5,19 @@
 % before loading nips_2016
 %
 % to avoid loading the natbib package, add option nonatbib:
-% \usepackage[nonatbib]{nips_2016}
+\usepackage[nonatbib]{nips_2016}
 
 \usepackage{nips_2016}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{mwe}
+
+\usepackage{amsmath, amsthm, amssymb}
 
 % to compile a camera-ready version, add the [final] option, e.g.:
 % \usepackage[final]{nips_2016}
@@ -20,8 +30,8 @@
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
-
-\title{Formatting instructions for NIPS 2016}
+\usepackage{algorithm}
+\title{Online Prototypes and Criticisms}
 
 % The \author macro works with any number of authors. There are two
 % commands used to separate the names and addresses of multiple
@@ -33,374 +43,315 @@
 % on the second line, try using \AND instead of \And before the third
 % author name.
 
+
 \author{
-  David S.~Hippocampus\thanks{Use footnote for providing further
-    information about author (webpage, alternative
-    address)---\emph{not} for acknowledging funding agencies.} \\
-  Department of Computer Science\\
-  Cranberry-Lemon University\\
-  Pittsburgh, PA 15213 \\
-  \texttt{hippo@cs.cranberry-lemon.edu} \\
-  %% examples of more authors
-  %% \And
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
-  %% \AND
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
-  %% \And
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
-  %% \And
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
+	David S.~Hippocampus\thanks{Use footnote for providing further
+		information about author (webpage, alternative
+		address)---\emph{not} for acknowledging funding agencies.} \\
+	Department of Computer Science\\
+	Cranberry-Lemon University\\
+	Pittsburgh, PA 15213 \\
+	\texttt{hippo@cs.cranberry-lemon.edu} \\
+	%% examples of more authors
+	%% \And
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \AND
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \And
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \And
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
 }
 
 \begin{document}
-% \nipsfinalcopy is no longer used
-
-\maketitle
-
-\begin{abstract}
-  The abstract paragraph should be indented \nicefrac{1}{2}~inch
-  (3~picas) on both the left- and right-hand margins. Use 10~point
-  type, with a vertical spacing (leading) of 11~points.  The word
-  \textbf{Abstract} must be centered, bold, and in point size 12. Two
-  line spaces precede the abstract. The abstract must be limited to
-  one paragraph.
-\end{abstract}
-
-\section{Submission of papers to NIPS 2016}
-
-\textbf{There is a new style file for papers submitted in 2016!}
-
-NIPS requires electronic submissions.  The electronic submission site
-is
-\begin{center}
-  \url{https://cmt.research.microsoft.com/NIPS2016/}
-\end{center}
-
-Please read carefully the instructions below and follow them
-faithfully.
-
-\subsection{Style}
-
-Papers to be submitted to NIPS 2016 must be prepared according to the
-instructions presented here. Papers may only be up to eight pages
-long, including figures. Since 2009 an additional ninth page
-\emph{containing only acknowledgments and/or cited references} is
-allowed. Papers that exceed nine pages will not be reviewed, or in any
-other way considered for presentation at the conference.
-
-The margins in 2016 are the same as since 2007, which allow for
-$\sim$$15\%$ more words in the paper compared to earlier years.
-
-Authors are required to use the NIPS \LaTeX{} style files obtainable
-at the NIPS website as indicated below. Please make sure you use the
-current files and not previous versions. Tweaking the style files may
-be grounds for rejection.
-
-\subsection{Retrieval of style files}
-
-The style files for NIPS and other conference information are
-available on the World Wide Web at
-\begin{center}
-  \url{http://www.nips.cc/}
-\end{center}
-The file \verb+nips_2016.pdf+ contains these instructions and
-illustrates the various formatting requirements your NIPS paper must
-satisfy.
-
-The only supported style file for NIPS 2016 is \verb+nips_2016.sty+,
-rewritten for \LaTeXe{}.  \textbf{Previous style files for \LaTeX{}
-  2.09, Microsoft Word, and RTF are no longer supported!}
-
-The new \LaTeX{} style file contains two optional arguments:
-\verb+final+, which creates a camera-ready copy, and \verb+nonatbib+,
-which will not load the \verb+natbib+ package for you in case of
-package clash.
-
-At submission time, please omit the \verb+final+ option. This will
-anonymize your submission and add line numbers to aid review.  Please
-do \emph{not} refer to these line numbers in your paper as they will
-be removed during generation of camera-ready copies.
-
-The file \verb+nips_2016.tex+ may be used as a ``shell'' for writing
-your paper. All you have to do is replace the author, title, abstract,
-and text of the paper with your own.
-
-The formatting instructions contained in these style files are
-summarized in Sections \ref{gen_inst}, \ref{headings}, and
-\ref{others} below.
-
-\section{General formatting instructions}
-\label{gen_inst}
-
-The text must be confined within a rectangle 5.5~inches (33~picas)
-wide and 9~inches (54~picas) long. The left margin is 1.5~inch
-(9~picas).  Use 10~point type with a vertical spacing (leading) of
-11~points.  Times New Roman is the preferred typeface throughout, and
-will be selected for you by default.  Paragraphs are separated by
-\nicefrac{1}{2}~line space (5.5 points), with no indentation.
-
-The paper title should be 17~point, initial caps/lower case, bold,
-centered between two horizontal rules. The top rule should be 4~points
-thick and the bottom rule should be 1~point thick. Allow
-\nicefrac{1}{4}~inch space above and below the title to rules. All
-pages should start at 1~inch (6~picas) from the top of the page.
-
-For the final version, authors' names are set in boldface, and each
-name is centered above the corresponding address. The lead author's
-name is to be listed first (left-most), and the co-authors' names (if
-different address) are set to follow. If there is only one co-author,
-list both author and co-author side by side.
-
-Please pay special attention to the instructions in Section \ref{others}
-regarding figures, tables, acknowledgments, and references.
-
-\section{Headings: first level}
-\label{headings}
-
-All headings should be lower case (except for first word and proper
-nouns), flush left, and bold.
-
-First-level headings should be in 12-point type.
-
-\subsection{Headings: second level}
-
-Second-level headings should be in 10-point type.
-
-\subsubsection{Headings: third level}
-
-Third-level headings should be in 10-point type.
-
-\paragraph{Paragraphs}
-
-There is also a \verb+\paragraph+ command available, which sets the
-heading in bold, flush left, and inline with the text, with the
-heading followed by 1\,em of space.
-
-\section{Citations, figures, tables, references}
-\label{others}
-
-These instructions apply to everyone.
-
-\subsection{Citations within the text}
-
-The \verb+natbib+ package will be loaded for you by default.
-Citations may be author/year or numeric, as long as you maintain
-internal consistency.  As to the format of the references themselves,
-any style is acceptable as long as it is used consistently.
-
-The documentation for \verb+natbib+ may be found at
-\begin{center}
-  \url{http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}
-\end{center}
-Of note is the command \verb+\citet+, which produces citations
-appropriate for use in inline text.  For example,
-\begin{verbatim}
-   \citet{hasselmo} investigated\dots
-\end{verbatim}
-produces
-\begin{quote}
-  Hasselmo, et al.\ (1995) investigated\dots
-\end{quote}
-
-If you wish to load the \verb+natbib+ package with options, you may
-add the following before loading the \verb+nips_2016+ package:
-\begin{verbatim}
-   \PassOptionsToPackage{options}{natbib}
-\end{verbatim}
-
-If \verb+natbib+ clashes with another package you load, you can add
-the optional argument \verb+nonatbib+ when loading the style file:
-\begin{verbatim}
-   \usepackage[nonatbib]{nips_2016}
-\end{verbatim}
-
-As submission is double blind, refer to your own published work in the
-third person. That is, use ``In the previous work of Jones et
-al.\ [4],'' not ``In our previous work [4].'' If you cite your other
-papers that are not widely available (e.g., a journal paper under
-review), use anonymous author names in the citation, e.g., an author
-of the form ``A.\ Anonymous.''
-
-\subsection{Footnotes}
-
-Footnotes should be used sparingly.  If you do require a footnote,
-indicate footnotes with a number\footnote{Sample of the first
-  footnote.} in the text. Place the footnotes at the bottom of the
-page on which they appear.  Precede the footnote with a horizontal
-rule of 2~inches (12~picas).
-
-Note that footnotes are properly typeset \emph{after} punctuation
-marks.\footnote{As in this example.}
-
-\subsection{Figures}
-
-All artwork must be neat, clean, and legible. Lines should be dark
-enough for purposes of reproduction. The figure number and caption
-always appear after the figure. Place one line space before the figure
-caption and one line space after the figure. The figure caption should
-be lower case (except for first word and proper nouns); figures are
-numbered consecutively.
-
-You may use color figures.  However, it is best for the figure
-captions and the paper body to be legible if the paper is printed in
-either black/white or in color.
-\begin{figure}[h]
-  \centering
-  \fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-  \caption{Sample figure caption.}
-\end{figure}
-
-\subsection{Tables}
-
-All tables must be centered, neat, clean and legible.  The table
-number and title always appear before the table.  See
-Table~\ref{sample-table}.
-
-Place one line space before the table title, one line space after the
-table title, and one line space after the table. The table title must
-be lower case (except for first word and proper nouns); tables are
-numbered consecutively.
-
-Note that publication-quality tables \emph{do not contain vertical
-  rules.} We strongly suggest the use of the \verb+booktabs+ package,
-which allows for typesetting high-quality, professional tables:
-\begin{center}
-  \url{https://www.ctan.org/pkg/booktabs}
-\end{center}
-This package was used to typeset Table~\ref{sample-table}.
-
-\begin{table}[t]
-  \caption{Sample table title}
-  \label{sample-table}
-  \centering
-  \begin{tabular}{lll}
-    \toprule
-    \multicolumn{2}{c}{Part}                   \\
-    \cmidrule{1-2}
-    Name     & Description     & Size ($\mu$m) \\
-    \midrule
-    Dendrite & Input terminal  & $\sim$100     \\
-    Axon     & Output terminal & $\sim$10      \\
-    Soma     & Cell body       & up to $10^6$  \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\section{Final instructions}
-
-Do not change any aspects of the formatting parameters in the style
-files.  In particular, do not modify the width or length of the
-rectangle the text should fit into, and do not change font sizes
-(except perhaps in the \textbf{References} section; see below). Please
-note that pages should be numbered.
-
-\section{Preparing PDF files}
-
-Please prepare submission files with paper size ``US Letter,'' and
-not, for example, ``A4.''
-
-Fonts were the main cause of problems in the past years. Your PDF file
-must only contain Type 1 or Embedded TrueType fonts. Here are a few
-instructions to achieve this.
-
-\begin{itemize}
-
-\item You should directly generate PDF files using \verb+pdflatex+.
-
-\item You can check which fonts a PDF files uses.  In Acrobat Reader,
-  select the menu Files$>$Document Properties$>$Fonts and select Show
-  All Fonts. You can also use the program \verb+pdffonts+ which comes
-  with \verb+xpdf+ and is available out-of-the-box on most Linux
-  machines.
-
-\item The IEEE has recommendations for generating PDF files whose
-  fonts are also acceptable for NIPS. Please see
-  \url{http://www.emfield.org/icuwb2010/downloads/IEEE-PDF-SpecV32.pdf}
-
-\item \verb+xfig+ "patterned" shapes are implemented with bitmap
-  fonts.  Use "solid" shapes instead.
-
-\item The \verb+\bbold+ package almost always uses bitmap fonts.  You
-  should use the equivalent AMS Fonts:
-\begin{verbatim}
-   \usepackage{amsfonts}
-\end{verbatim}
-followed by, e.g., \verb+\mathbb{R}+, \verb+\mathbb{N}+, or
-\verb+\mathbb{C}+ for $\mathbb{R}$, $\mathbb{N}$ or $\mathbb{C}$.  You
-can also use the following workaround for reals, natural and complex:
-\begin{verbatim}
-   \newcommand{\RR}{I\!\!R} %real numbers
-   \newcommand{\Nat}{I\!\!N} %natural numbers
-   \newcommand{\CC}{I\!\!\!\!C} %complex numbers
-\end{verbatim}
-Note that \verb+amsfonts+ is automatically loaded by the
-\verb+amssymb+ package.
-
-\end{itemize}
-
-If your file contains type 3 fonts or non embedded TrueType fonts, we
-will ask you to fix it.
-
-\subsection{Margins in \LaTeX{}}
-
-Most of the margin problems come from figures positioned by hand using
-\verb+\special+ or other commands. We suggest using the command
-\verb+\includegraphics+ from the \verb+graphicx+ package. Always
-specify the figure width as a multiple of the line width as in the
-example below:
-\begin{verbatim}
-   \usepackage[pdftex]{graphicx} ...
-   \includegraphics[width=0.8\linewidth]{myfile.pdf}
-\end{verbatim}
-See Section 4.4 in the graphics bundle documentation
-(\url{http://mirrors.ctan.org/macros/latex/required/graphics/grfguide.pdf})
-
-A number of width problems arise when \LaTeX{} cannot properly
-hyphenate a line. Please give LaTeX hyphenation hints using the
-\verb+\-+ command when necessary.
-
-\subsubsection*{Acknowledgments}
-
-Use unnumbered third level headings for the acknowledgments. All
-acknowledgments go at the end of the paper. Do not include
-acknowledgments in the anonymized submission, only in the final paper.
-
-\section*{References}
-
-References follow the acknowledgments. Use unnumbered first-level
-heading for the references. Any choice of citation style is acceptable
-as long as you are consistent. It is permissible to reduce the font
-size to \verb+small+ (9 point) when listing the references. {\bf
-  Remember that you can use a ninth page as long as it contains
-  \emph{only} cited references.}
-\medskip
-
-\small
-
-[1] Alexander, J.A.\ \& Mozer, M.C.\ (1995) Template-based algorithms
-for connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and
-T.K.\ Leen (eds.), {\it Advances in Neural Information Processing
-  Systems 7}, pp.\ 609--616. Cambridge, MA: MIT Press.
-
-[2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS:
-  Exploring Realistic Neural Models with the GEneral NEural SImulation
-  System.}  New York: TELOS/Springer--Verlag.
-
-[3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of
-learning and recall at excitatory recurrent synapses and cholinergic
-modulation in rat hippocampal region CA3. {\it Journal of
-  Neuroscience} {\bf 15}(7):5249-5262.
-
+	% \nipsfinalcopy is no longer used
+	
+	\maketitle
+	
+	\begin{abstract}
+		In our work we develop an algorithm for finding an example-based summary of our dataset. We combine two already existing algorithms to obtain a new one, providing online updates of the  subset of prototypes and  the subset of criticisms. We propose two approaches to this problem and present results regarding both of them.
+	\end{abstract}
+	
+	\section{Introduction and related work}
+	
+	%% Our outline:
+	%% 1. Introduction
+	%% 2. Theory
+	%% 		2.1 Paper by Been Kim et al. (describe)
+	%% 		2.2 Paper by Brooks Paige et al. (describe)
+	%% 3. Our algorithms
+	%%		3.1 Slow algorithm (description of the method)
+	%%		3.2 Faster algorithm (description of the method)
+	%% 4. Results, comparisons, pictures containing sets of prototypes and sets of criticisms
+	%% 5. Summary
+	%%
+	
+	In order to make complex distributions understandable for humans, a part of machine learning research was devoted to creating methods of summarising datasets using sets of \textit{prototypes}. The idea is to choose such subsample that minimizes some distance between the empirical distribution of the  subset and the distribution of the whole dataset (the distances used for this puprose vary depending on further specifications of the method). New approaches of machine learning researchers \cite{kim} involve presenting a set of \textit{criticisms} in addition to prototypes, to make the summary even more interpretable for humans. The results of human pilot study descried in \cite{kim} show that indeed  criticisms increase interpretability of the method -- in comparison to the method based on prototypes only, subjects were able to predict results of the method more accurately. However, there was no evidence that the critisms inrease efficiency of the task, since the subjects performed faster when only prototypes were shown to them.
+	
+	Another extension of the explanation-based methods was proposed by \cite{kim}. Their method is designed to choose a subsample  of size $M$ of prototypes from an `online' stream of observations of length $N$. It is assumed additionally that $N$ is not known in advance, therefore, the algorithms stores a set of $M$ prototypes at all times. As each new observation from the stream arrives, the subsample of prototypes is updated -- the new observation may be swapped (with some probability) with one of the already existing prototypes. The `online' method prevents us from storing all data for later consideration whether it should be classified as a prototype or not
+	
+	Our goal was to combine the two approaches and create an algorithm that makes an `online' summary of a given dataset, consisting both of prototypes and criticisms. 
+	
+	\section{Theoretical background}
+	\subsection{The Greedy algorithm: combining prototypes with criticisms}
+	The Maximum Mean Discrepancy (MMD) is a measure of distance between two distributions $P$ and $Q$ and is defined as follows:
+	\begin{equation}\label{mmd}
+	MMD(\mathcal{F}, P, Q) = \sup_{f \in \mathcal{F}} \left(E_{X \sim P} [f(X)] - E_{X \sim Q} [f(Y)] \right),
+	\end{equation}
+	where $\mathcal{F}$ is a function space. In the following discussion, we will focus on the case when $\mathcal{F}$ is a reproducing kernel Hilbert space (RKHS) with kernel function $k: \mathcal{X} \times \mathcal{X} \to \mathbb{R}$. It can be shown that 
+	$$
+	MMD^2(\mathcal{F}, P, Q) = 0 \quad \iff  P\textrm{ is indistinguishable from }Q\textrm{ on }\mathcal{F}.
+	$$
+	
+	%to change the notation
+	\cite{kim} propose a method for prototypes and criticisms selection based on the minimization of the $MMD^2$ statistic mentioned above. 
+	Let $N$ be the number of available observations, $M$ be the desired number of prototypes representing the dataset and $[N]$ be the set $\{1,2, \ldots, N\}$. The algorithm aims at finding a subset $S\subseteq [N]$ of indices such that $|S|\leq M$ and $S$ minimizes $MMD^2(\mathcal{F}, X, X_S)$, where $X$ is the set of observations and $X_S$ is a subsample corresponding to indices $S$.
+	%The method of choosing the subsample of prototypes introduced in \cite{kim} is as follows: find a subset $S\subset [N]$ of indices such that $|S|= M$ and $S$ minimizes $MMD^2(\mathcal{F}, X, X_S)$, where $X$ is the set of observations and $X_S$ is its subsample corresponding to indices $S$. 
+	The empirical distribution of both $X$ and $X_S$ are used in the computation of the MMD statistic. This implies that the empirical means will substitute the expected values in equation (\ref{mmd}). 
+	%We use here empirical distributions of $X$ and $X_S$ i.e. instead of expected values in definition (\ref{mmd}) we have empirical means. 
+	It can be shown that minimizing the $MMD^2$ is equivalent to maximizing the following function $J(S)$ over $S$ such that $|S|=M$:
+	\begin{equation}
+	J(S) = \frac{2}{n |S|} \sum_{i \in [N], j \in S} k(x_i, x_j) - \frac{1}{|S|^2}\sum_{i, j \in S} k(x_i, x_j).
+	\end{equation}
+	%used x_j instead of y_j
+	%explain why we do not use _b in definitions 
+	
+	%% Relation of mmd and proto and criti
+	%% formula for proto
+	%% formula for criti
+	
+	An approximate solution of the above optimization problem is given by Algorithm \ref{greedy} .
+	
+	\begin{algorithm}
+		\caption{The Greedy algorithm }\label{greedy}
+		\begin{algorithmic}[1]
+			\State{\textbf{Input:} $M$, $S= \emptyset$} 
+			\While{$|S| <M$} 
+			\For {$i \in [N]\setminus S$}
+			\State {$f_i = F(S \cup i) - F(S)$ }
+			\State {$S = S \cup \{\textrm{argmax }f_i\}$ }
+			\EndFor
+			\EndWhile \\
+			\Return{$S$.}
+		\end{algorithmic}
+	\end{algorithm}
+	
+	Theoretical results \cite{nemhauser1978analysis} ensure that, under certain conditions on the kernel matrix, the subset obtained by Algorithm \ref{greedy} achieves at least a fraction $(1-\frac{1}{e})$ of the objective value achieved by the optimal subset. The conditions are satisfied by the radial basis function kernel which will be used in the following analysis.
+	
+	In addition to selecting prototypes, the Greedy algorithm allows for the selection of observations that are not well explained by prototypes. These data points will be called prototypes. Let $c$ denote the number of desired criticisms. In order to find data points that deviate the most from prototypes, the following cost function is   considered in \cite{kim}:
+	\begin{equation}\label{costfunction}
+	L(C) = \sum_{l \in C}\left| \frac{1}{n}\sum_{i \in \left[ n \right]}k(x_i, x_l) - \frac{1}{m}\sum_{i \in S^{*}}k(x_i, x_l), \right|
+	\end{equation}
+	where $S^{*}$ is the set of selected prototypes.
+	A straightforward approach would be to maximize \ref{costfunction} over sets $C\subseteq [N]\setminus S^{*}$ such that $|C|\leq c$. However, the authors suggest that more diverse criticisms are obtained when a regularizing function is added to \ref{costfunction}. In this case, the optimization problem becomes:
+	$$
+	\max_{C\subseteq [N]\setminus S^{*}, |C|\leq c} L(C) + r(C).
+	$$
+	The regularizing function used by \cite{kim} and in the following discussion is given by:
+	$$
+	r(K,C) = \log \det K_{C,C},
+	$$
+	where $K_{C,C}$ is the part of the kernel matrix $K$ corresponding to the set of indices $C$.
+	%% should we call it kernel matrix or gram matrix?
+	
+	
+	\subsection{Streaming MMD Minimization}
+	
+	\subsection{Streaming MMD Minimization}
+	
+	The following section summarizes the main results of the paper \textit{Super-Sampling with a Reservoir} \cite{streaming} that we have used as an inspiration for our Faster Algorithm [ADD REFERENCE]. 
+	
+	The Super-Sampling with a Reservoir is an updated version of the simplest reservoir sampling for unweighted data [ADD REFERENCE] which allows for processing streaming data online (the simplest algorithm results in a random sample without replacement). This is possible thanks to the properties of reproducing kernel Hilbert spaces and kernel mean embeddings of distributions. A useful representation of a kernel $k$ is as an inner product over an explicit ``feature space'' mapping $\phi: \mathcal{X} \rightarrow \mathcal{H}$, with
+	\begin{equation*}
+	k(x, x') = \langle \phi(x), \phi(x') \rangle
+	\end{equation*}
+	However, the feature map $\phi(x)$ is infinite dimensional (as in squared exponential kernel). So, to make it possible to construct an online algorithm, we explicitly instantiate an approximate feature space representation $\hat{\phi}(x) \in \mathbb{R}^D$. This is achieved in \cite{streaming} by the usage of a finite vector of $D$ random Fourier projections, where each feature is of the form:
+	\begin{equation*}
+	\hat{\phi}(x) = \sqrt{\frac{2}{D}} \Bigg[
+	\begin{array}{c} \cos (\omega_1^T x + b_1)  \\ \vdots \\ \cos (\omega_D^T x + b_D) \end{array} \Bigg]
+	\end{equation*}
+	where each $\omega_d$ is drawn from the distribution $p(\omega)$; $p(\omega)$ arises by taking the Fourier transform of the kernel, and each $b_d$ is uniform on $[0, 2\pi]$. Then these random Fourier features $\hat{\phi}(x) \in \mathbb{R}^D$ approximate the true (potentially infinite dimensional) feature map $\phi(x) \in \mathbb{H}$. Then, an approximate kernel defined by the inner product of the approximate feature maps, i.e. $k(x, x') \approx \hat{\phi}(x)^T \hat{\phi}(x)$, provides an unbiased estimate of the evaluations of the kernel function, with
+	\begin{equation*}
+	\mathbb{E}_{\omega, b}[\hat{\phi}(x)^T, \hat{\phi}(x)] = k(x, x').
+	\end{equation*}
+	Now, we can use random Fourier features evaluated at finite sample points to approximate the empirical estimates of the mean embeddings, for both $X_N$ (stream) and $P_M$ (local subset), where $P_M$ is a small subset of the full points in the set $X_N$, and use those to rewrite the MMD as an RKHS norm. 
+	
+	\textbf{Streaming subset selection}
+	
+	Our so-called reservoir will be $P_M$, which contains points drawn without replacement from $X_N$, representing our current approximation of the distribution of the first $n$ points, i.e. our prototypes. To summarize, the algorithm takes the form of a greedy optimization algorithm in which (1) a new candidate point $x_n$ is inserted into our set $P_M$, (2) an inner optimization problem is solved to decide whether to keep $x_n$, and if so, which $p_j$ it should replace. The details about the algorithm can be found in \cite{streaming} but it is worth emphasizing that a nearest-neighbor search is used to discard a single point of the subset $P_M \cup x_n$, where ${n = M+1, \ldots, N}$, which ensures the MMD is minimized. 
+	
+	
+	\section{Our Algorithms}
+	%%We will now describe several methods which compute criticisms online. 
+	We will now describe two algorithms that select both prototypes and criticisms in an online fashion. The idea is that, as a new data point arrives, we would like to determine whether to add it to the set of prototypes and, if not, whether it should be added to the set of criticism. We want to maintain a fixed number of criticisms so if we do decide to include the new point then we need to exclude one of the existing criticisms. 
+	The first $M$ values in the stream are considered as the starting set of prototypes while the second set of $M$ points are treated as the initial set of criticism. Each time a new data point $x_n$ is considered, the algorithm selects $M$ prototypes among the $M+1$ values available. This is done by starting from an empty set of prototypes and then looping over the available points. If the new data point $x_n$ is accepted as a prototype, the algorithm starts the evaluation of $x_{n+1}$. Conversely, if $x_n$ is rejected as a prototype, is then tested as a potential criticism. Once done for the identification of prototypes, the algorithm selects $M$ criticisms among the $M+1$ values available. This algorithm is described in 
+	
+	\begin{algorithm}
+		\caption{Online Search}\label{online_greedy}
+		\begin{algorithmic}[1]
+			\State{\textbf{Input:} Stream of samples: $\textbf{x}_1, \dots, \textbf{x}_n$}
+			\State{\textbf{Output:} A subset of prototypes: $P$ and a subset of criticisms: $C$.}
+			\State{Set the initial set of prototypes to be: $P_0 = 
+				\left\lbrace 
+				\textbf{x}_1, \dots, \textbf{x}_M
+				\right\rbrace$}
+			\State{Set the initial set of criticisms to be: $C_0 = 
+				\left\lbrace 
+				\textbf{x}_{M+1}, \dots, \textbf{x}_{2M}
+				\right\rbrace$}
+			\For{$n = M+1, \dots , N$} 
+			\State{$P_n$ = OnlinePrototypes($P_{n-1}, x_n)$}
+			\If{$x_n \not\in P_n$}
+			\State{$C_n$ = OnlineCriticisms($C_{n-1}, x_n)$}
+			\EndIf
+			\EndFor\\
+			
+			\Return{$P_N,C_N$}
+		\end{algorithmic}
+	\end{algorithm}
+	
+	\subsection{Online Greedy}
+	the algorithm selects $M$ prototypes among the $M+1$ values available. This is done by starting from an empty set of prototypes and then looping over the available points. If the new data point $x_n$ is accepted as a prototype, the algorithm starts the evaluation of $x_{n+1}$. Conversely, if $x_n$ is rejected as a prototype is then tested as a potential criticism. Once done for the identification of prototypes, the algorithm selects $M$ criticisms among the $M+1$ values available. The new set of criticism is picked optimizing the function ( ref to $L(C)$ mentioned in the greedy algorithm). The regularization function (refer to greedy part) is considered. This algorithm is described in 
+	
+	
+	We now introduce a sequential version of the Greedy algorithm for selecting prototypes and criticism in an online fashion. The algorithm, which we will refer to as "Online Greedy" (OG), considers again the MMD as a measure of discrepancy between the samples and any selected subset. However, differently from \ref{greedy}, OG processes streaming data online selecting a subsets of size M for both prototypes and criticism.  Notice how, the main difference between the OG algorithm and the G algorithm, lies in the computation of the kernel matrix. Indeed, in the original greedy algorithm, the Gram matrix $K \in R^{NxN}$ where $K_{ij}=k(x_i,x_j)$ is computed for the overall set of $N$ observations which is available when running each step of the algorithm. In the online version of the algorithm, only $n \leq N$ observations are observed at each step. This implies that the subset of the Gram matrix, say $K_{subset}$, used at the first step is of dimension $2Mx2M$. Indeed, the first $2M$ observations are initially split in a set of $M$ prototypes and $M$ criticisms. We thus have a subset of $K_{subset}$ of dimension $Mx2M$ both for the prototypes, say $K_{prototypes}$,and the criticism, say $K_{criticism}$. As soon as a new observation becomes available, the dimension of c and $K_{criticism}$ increases to $(M+1)x(2M+1)$. The point is then tested to be a prototype or a criticism. Depending on the type of point the corresponding matrices $K_{prototypes}$ and $K_{criticism}$ will be modified so as to have on the rows the new set of prototypes and on the columns the observations collected so far. The number of columns for both $K_{prototypes}$ and $K_{criticism}$ will increase overtime incorporating the observations collected. The number of columns will stay constant to the $M$. At each step, a standard greedy algorithm will be performed using the relevant kernel matrices.  
+	
+	
+	\begin{algorithm}
+		\caption{The OG Algorithm}\label{OnlineGreedy}
+		\begin{algorithmic}[1]
+			\State{\textbf{Input:} Stream of samples: $\textbf{x}_1, \dots, \textbf{x}_n$}
+			\State{\textbf{Output:} A subset of prototypes: $P$ and a subset of criticisms: $C$.}
+			\State{Set the initial set of prototypes to be: $P_0 = 
+				\left\lbrace 
+				\textbf{x}_1, \dots, \textbf{x}_M
+				\right\rbrace$}
+			\State{Set the initial set of criticisms to be: $C_0 = 
+				\left\lbrace 
+				\textbf{x}_{M+1}, \dots, \textbf{x}_{2M}
+				\right\rbrace$}
+			
+			\For{$n = M+1, \dots , N$} 
+			\State{$P_n$ = Greedy($P_{n-1}, x_n)$}
+			\If{$x_n \not\in P_n$}
+			\State{$C_n$ = Greedy($C_{n-1}, x_n)$}
+			\EndIf
+			\EndFor\\
+			
+			\Return{$P_N,C_N$}
+		\end{algorithmic}
+	\end{algorithm}
+	
+	\subsection{Faster Algorithm}
+	Ideally we would like to use the same loss function that was used in the greedy criticism algorithm. If we were able to compute it then we could run a greedy-type algorithm on just the existing criticisms and the new data point. 
+	
+	However, we cannot compute this easily. This is because it would require us to calculate $k(x_i, x_n)$ for all $i \in \left[ n \right]$ which will prove to be very computationally intensive for large datasets. The other point is that we may not want to have to store all the data up to this point so it may not even be possible to make this computation. 
+	
+	In order to get around this we can make use of the random fourier feature approximation. This allows us to write 
+	\begin{equation}
+	L_n(C) = \sum_{l \in C}\left| \frac{1}{n}\sum_{i \in \left[ n \right]}k(x_i, x_l) - \frac{1}{m}\sum_{i \in P_n}k(x_i, x_l) \right|
+	\end{equation}
+	\begin{equation}
+	\approx
+	\sum_{l \in C}\left| \frac{1}{n}
+	\sum_{i \in \left[ n \right]}\langle \hat{\phi}(x_i),  \hat{\phi}(x_l)\rangle 
+	- \frac{1}{m}
+	\sum_{i \in P_n}\hat{\phi}(x_i),  \hat{\phi}(x_l) \right| 
+	\end{equation}	
+	\begin{equation}
+	= 
+	\sum_{l \in C}\left| \frac{1}{n}
+	\left\langle 
+	\sum_{i \in \left[ n \right]}\hat{\phi}(x_i),  \hat{\phi}(x_l)
+	\right\rangle 
+	- \frac{1}{m}
+	\left\langle
+	\sum_{i \in P_n}\hat{\phi}(x_i),  \hat{\phi}(x_l)
+	\right\rangle 
+	\right| 
+	:= 
+	\tilde{L}(C)
+	\end{equation}
+	Now we can try and maximize this function online in order to identify the criticisms. 
+	
+	Instead of computing $k(x_i, x_n)$ for all $i \in \left[ n \right]$, at each step we store $\sum_{i \in \left[ n \right]}\hat{\phi}(x_i)$. Updating this at each stage only takes $O(D)$ operations where $D$ is the number of random fourier features. An additional bonus is that we don't have to store all of the previous data points in order to make this update.
+	
+	Of course we may still need to use a regularization term however this only requires us to calculate the kernel for the criticisms and so is not as computationally intensive. Therefore, the function that we will  look to maximize at each step is:
+	\begin{equation}
+	\tilde{F}(C) := \tilde{L}(C) + \log \det K_{C,C}
+	\end{equation}
+	
+	Here at the $n$th step when we are considering the data point $x_n$ if we have rejected and we want to update the set of criticisms to the subset of $C_{n-1} \cup x_n$ of size $M^*$ which maximizes $\tilde{F}$. Thus as with the streaming prototype procedure we need to decide which point to drop. This procedure is 
+	
+	\begin{algorithm}
+		\caption{Online Criticisms}\label{greedy}
+		\begin{algorithmic}[1]
+			\State{\textbf{Input:} $C_{n-1}, x_n$} 
+			\State{$C_n = \text{argmax}
+				\left\lbrace 
+				\tilde{F}\left( C \right):
+				{C \subset C_{n-1} \cup x_n: \left| C \right| = M^*}
+				\right\rbrace$}\\
+			\Return{$C_n$}
+		\end{algorithmic}
+	\end{algorithm}
+	
+	\section{Results}
+	
+	\subsection{Greedy Algorithm}
+	\subsection{Online Prototypes and Criticisms}
+	\begin{figure*}
+		\centering
+		\begin{subfigure}[b]{0.475\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{OriginalGaussian_20_2g_reg}
+			\caption[Network2]%
+			{{\small Network 1}}    
+			\label{fig:mean and std of net14}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.475\textwidth} 
+			\centering 
+			\includegraphics[width=\textwidth]{OriginalGaussian_20_2g_reg}
+			\caption[]%
+			{{\small Network 2}}    
+			\label{fig:mean and std of net24}
+		\end{subfigure}
+		\vskip\baselineskip
+		\begin{subfigure}[b]{0.475\textwidth}   
+			\centering 
+			\includegraphics[width=\textwidth]{OriginalGaussian_20_2g_reg}
+			\caption[]%
+			{{\small Network 3}}    
+			\label{fig:mean and std of net34}
+		\end{subfigure}
+		\quad
+		\begin{subfigure}[b]{0.475\textwidth}   
+			\centering 
+			\includegraphics[width=\textwidth]{OriginalGaussian_20_2g_reg}
+			\caption[]%
+			{{\small Network 4}}    
+			\label{fig:mean and std of net44}
+		\end{subfigure}
+		\caption[ The average and standard deviation of critical parameters ]
+		{\small The average and standard deviation of critical parameters: Region R4} 
+		\label{fig:mean and std of nets}
+	\end{figure*}
+	
+	
+	%\bibliographystyle{unsrt}
+	\bibliographystyle{apalike}
+	\bibliography{references}
+	
 \end{document}

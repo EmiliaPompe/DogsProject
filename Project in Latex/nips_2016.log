@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  24 JAN 2017 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  25 JAN 2017 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -44,13 +44,6 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box26
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip43
-\bibsep=\skip44
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count94
-)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -68,9 +61,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count95
-\Gm@cntv=\count96
-\c@Gm@tempcnt=\count97
+\Gm@cnth=\count94
+\Gm@cntv=\count95
+\c@Gm@tempcnt=\count96
 \Gm@bindingoffset=\dimen108
 \Gm@wd@mp=\dimen109
 \Gm@odd@mp=\dimen110
@@ -81,13 +74,50 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen115
 \Gm@dimlist=\toks16
 )
-\@nipsabovecaptionskip=\skip45
-\@nipsbelowcaptionskip=\skip46
+\@nipsabovecaptionskip=\skip43
+\@nipsbelowcaptionskip=\skip44
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count97
+\float@exts=\toks17
+\float@box=\box27
+\@float@everytoks=\toks18
+\@floatcapt=\box28
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks19
+\c@algorithm=\count98
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count99
+\c@ALG@rem=\count100
+\c@ALG@nested=\count101
+\ALG@tlm=\skip45
+\ALG@thistlm=\skip46
+\c@ALG@Lnr=\count102
+\c@ALG@blocknr=\count103
+\c@ALG@storecount=\count104
+\c@ALG@tmpcounter=\count105
+\ALG@tmplength=\skip47
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
@@ -398,6 +428,190 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count106
+\U@D=\dimen116
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks22
+\verbatim@line=\toks23
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@ContinuedFloat=\count108
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count109
+\c@subtable=\count110
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mwe/mwe.sty
+Package: mwe 2012/05/15 v0.3 Package to support minimal working examples (MWE)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count111
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count112
+\c@Blindtext=\count113
+\c@blind@countparstart=\count114
+\blind@countxx=\count115
+\blindtext@numBlindtext=\count116
+\blind@countyy=\count117
+\c@blindlist=\count118
+\c@blindlistlevel=\count119
+\c@blindlist@level=\count120
+\blind@listitem=\count121
+\c@blind@listcount=\count122
+\c@blind@levelcount=\count123
+\blind@mathformula=\count124
+\blind@Mathformula=\count125
+\c@blind@randomcount=\count126
+\c@blind@randommax=\count127
+\c@blind@pangramcount=\count128
+\c@blind@pangrammax=\count129
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks24
+\ex@=\dimen126
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen127
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count130
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count131
+\leftroot@=\count132
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count133
+\DOTSCASE@=\count134
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen128
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count135
+\c@MaxMatrixCols=\count136
+\dotsspace@=\muskip10
+\c@parentequation=\count137
+\dspbrk@lvl=\count138
+\tag@help=\toks25
+\row@=\count139
+\column@=\count140
+\maxfields@=\count141
+\andhelp@=\toks26
+\eqnshift@=\dimen129
+\alignsep@=\dimen130
+\tagshift@=\dimen131
+\tagwidth@=\dimen132
+\totwidth@=\dimen133
+\lineht@=\dimen134
+\@envbody=\toks27
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
+\thm@preskip=\skip51
+\thm@postskip=\skip52
+\thm@headsep=\skip53
+\dth@everypar=\toks34
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
 
@@ -415,8 +629,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
@@ -457,16 +671,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen116
-\Hy@linkcounter=\count98
-\Hy@pagecounter=\count99
+\@linkdim=\dimen135
+\Hy@linkcounter=\count142
+\Hy@pagecounter=\count143
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count100
+\Hy@SavedSpaceFactor=\count144
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -478,17 +692,17 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count101
+\c@Hy@tempcnt=\count145
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
-\XeTeXLinkMargin=\dimen117
-\Fld@menulength=\count102
-\Field@Width=\dimen118
-\Fld@charsize=\dimen119
+\XeTeXLinkMargin=\dimen136
+\Fld@menulength=\count146
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
 Package hyperref Info: Hyper figures OFF on input line 6342.
 Package hyperref Info: Link nesting OFF on input line 6347.
 Package hyperref Info: Hyper index ON on input line 6350.
@@ -498,101 +712,94 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count103
-\c@Item=\count104
-\c@Hfootnote=\count105
+\Hy@abspage=\count147
+\c@Item=\count148
+\c@Hfootnote=\count149
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count106
-\c@bookmark@seq@number=\count107
+\Fld@listcount=\count150
+\c@bookmark@seq@number=\count151
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip47
+\Hy@SectionHShift=\skip54
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen120
-\lightrulewidth=\dimen121
-\cmidrulewidth=\dimen122
-\belowrulesep=\dimen123
-\belowbottomsep=\dimen124
-\aboverulesep=\dimen125
-\abovetopsep=\dimen126
-\cmidrulesep=\dimen127
-\cmidrulekern=\dimen128
-\defaultaddspace=\dimen129
-\@cmidla=\count108
-\@cmidlb=\count109
-\@aboverulesep=\dimen130
-\@belowrulesep=\dimen131
-\@thisruleclass=\count110
-\@lastruleclass=\count111
-\@thisrulewidth=\dimen132
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks19
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+\heavyrulewidth=\dimen139
+\lightrulewidth=\dimen140
+\cmidrulewidth=\dimen141
+\belowrulesep=\dimen142
+\belowbottomsep=\dimen143
+\aboverulesep=\dimen144
+\abovetopsep=\dimen145
+\cmidrulesep=\dimen146
+\cmidrulekern=\dimen147
+\defaultaddspace=\dimen148
+\@cmidla=\count152
+\@cmidlb=\count153
+\@aboverulesep=\dimen149
+\@belowrulesep=\dimen150
+\@thisruleclass=\count154
+\@lastruleclass=\count155
+\@thisrulewidth=\dimen151
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip48
-\L@UnitsRaiseTextstyle=\skip49
-\L@UnitsRaiseScriptstyle=\skip50
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-))
+\L@UnitsRaiseDisplaystyle=\skip55
+\L@UnitsRaiseTextstyle=\skip56
+\L@UnitsRaiseScriptstyle=\skip57
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
-\MT@toks=\toks20
-\MT@count=\count112
+\MT@toks=\toks35
+\MT@count=\count156
 LaTeX Info: Redefining \textls on input line 774.
-\MT@outer@kern=\dimen133
+\MT@outer@kern=\dimen152
 LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
-\MT@listname@count=\count113
+\MT@listname@count=\count157
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2016/05/14 v2.6a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 916.
 LaTeX Info: Redefining \lslig on input line 916.
-\MT@outer@space=\skip51
+\MT@outer@space=\skip58
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
 ))
-(./nips_2016.aux)
+(./nips_2016.aux
+
+LaTeX Warning: Label `greedy' multiply defined.
+
+)
 \openout1 = `nips_2016.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 77.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -662,25 +869,59 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 67.
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count158
+\scratchdimen=\dimen153
+\scratchbox=\box31
+\nofMPsegments=\count159
+\nofMParguments=\count160
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count161
+\MPscratchDim=\dimen154
+\MPnumerator=\count162
+\makeMPintoPDFobject=\count163
+\everyMPtoPDFconversion=\toks37
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring OFF on input line 77.
+
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count114
+\c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 77.
+LaTeX Info: Redefining \pageref on input line 77.
+LaTeX Info: Redefining \nameref on input line 77.
 
 (./nips_2016.out) (./nips_2016.out)
 \@outlinefile=\write3
 \openout3 = `nips_2016.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 67.
+LaTeX Info: Redefining \microtypecontext on input line 77.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -695,13 +936,13 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 81.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+LaTeX Font Info:    Try loading font information for U+msa on input line 81.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -709,7 +950,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -718,8 +959,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 71.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 71.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 81.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 81.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -729,8 +970,8 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 72.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 79.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 82.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 84.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -739,61 +980,132 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 124.
- [1
 
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 320.
+LaTeX Warning: Citation `kim' on page 1 undefined on input line 100.
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
+LaTeX Warning: Citation `kim' on page 1 undefined on input line 100.
+
+
+LaTeX Warning: Citation `kim' on page 1 undefined on input line 102.
+
+[1
+
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `kim' on page 2 undefined on input line 118.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 137.
+
+LaTeX Warning: Citation `nemhauser1978analysis' on page 2 undefined on input li
+ne 150.
+
+
+LaTeX Warning: Citation `kim' on page 2 undefined on input line 152.
+
+
+LaTeX Warning: Reference `costfunction' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Reference `costfunction' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Citation `kim' on page 2 undefined on input line 161.
+
+
+LaTeX Warning: Citation `streaming' on page 2 undefined on input line 173.
+
+[2]
+
+LaTeX Warning: Citation `streaming' on page 3 undefined on input line 179.
+
+
+LaTeX Warning: Citation `streaming' on page 3 undefined on input line 192.
+
+[3] [4] <OriginalGaussian_20_2g_reg.png, id=76, 387.3672pt x 282.5757pt>
+File: OriginalGaussian_20_2g_reg.png Graphic file (type png)
+
+<use OriginalGaussian_20_2g_reg.png>
+Package pdftex.def Info: OriginalGaussian_20_2g_reg.png used on input line 318.
+
+(pdftex.def)             Requested size: 188.80779pt x 137.7303pt.
+File: OriginalGaussian_20_2g_reg.png Graphic file (type png)
+ <use OriginalGaussian_20_2g_reg.png>
+Package pdftex.def Info: OriginalGaussian_20_2g_reg.png used on input line 326.
+
+(pdftex.def)             Requested size: 188.80779pt x 137.7303pt.
+File: OriginalGaussian_20_2g_reg.png Graphic file (type png)
+
+<use OriginalGaussian_20_2g_reg.png>
+Package pdftex.def Info: OriginalGaussian_20_2g_reg.png used on input line 334.
+
+(pdftex.def)             Requested size: 188.80779pt x 137.7303pt.
+File: OriginalGaussian_20_2g_reg.png Graphic file (type png)
+ <use OriginalGaussian_20_2g_reg.png>
+Package pdftex.def Info: OriginalGaussian_20_2g_reg.png used on input line 342.
+
+(pdftex.def)             Requested size: 188.80779pt x 137.7303pt.
+
+(./nips_2016.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 320.
- [4]
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 387.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 404.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 406.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 406.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+ [5] [6 <./OriginalGaussian_20_2g_reg.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+ (./nips_2016.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
 
-(./nips_2016.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 406.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 406.
-Package rerunfilecheck Info: File `nips_2016.out' has not changed.
-(rerunfilecheck)             Checksum: 351AF28D8766A694F09B69678630ECDB;962.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 406.
+
+Package rerunfilecheck Warning: File `nips_2016.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `nips_2016.out':
+(rerunfilecheck)             Before: 99BD536ADD0A36B68AE8F5A2C0CF7A25;479
+(rerunfilecheck)             After:  0F3C3935831709892542003BF539E596;744.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 7808 strings out of 493013
- 118259 string characters out of 6133327
- 236575 words of memory out of 5000000
- 11107 multiletter control sequences out of 15000+600000
- 54575 words of font info for 137 fonts, out of 8000000 for 9000
+ 11587 strings out of 493013
+ 174786 string characters out of 6133327
+ 415932 words of memory out of 5000000
+ 14775 multiletter control sequences out of 15000+600000
+ 43198 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,8n,38p,213b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,40p,1928b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/f
-onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on nips_2016.pdf (5 pages, 142601 bytes).
+Output written on nips_2016.pdf (6 pages, 252728 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 26745 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 21566 words of extra memory for PDF output out of 24883 (max. 10000000)
 
