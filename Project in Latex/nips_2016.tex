@@ -168,6 +168,8 @@
 	
 	\subsection{Streaming MMD Minimization}
 	
+	\subsection{Streaming MMD Minimization}
+	
 	The following section summarizes the main results of the paper \textit{Super-Sampling with a Reservoir} \cite{streaming} that we have used as an inspiration for our Faster Algorithm [ADD REFERENCE]. 
 	
 	The Super-Sampling with a Reservoir is an updated version of the simplest reservoir sampling for unweighted data [ADD REFERENCE] which allows for processing streaming data online (the simplest algorithm results in a random sample without replacement). This is possible thanks to the properties of reproducing kernel Hilbert spaces and kernel mean embeddings of distributions. A useful representation of a kernel $k$ is as an inner product over an explicit ``feature space'' mapping $\phi: \mathcal{X} \rightarrow \mathcal{H}$, with
@@ -183,27 +185,17 @@
 	\begin{equation*}
 	\mathbb{E}_{\omega, b}[\hat{\phi}(x)^T, \hat{\phi}(x)] = k(x, x').
 	\end{equation*}
-	Now, we can use random Fourier features evaluated at finite sample points to approximate the empirical estimate of the mean embedding, i.e.
-	\begin{equation}
-	\label{eq:muhat}
-	\hat{\mu}_N = \frac{1}{N} \sum_{i=1}^{N} \hat{\phi}(x_i).
-	\end{equation}
-	
-	In the same manner, we can define a second empirical estimate of the mean embedding and approximate it by:
-	\begin{equation}
-	\label{eq:nuhat}
-	\nu_M = \frac{1}{M} \sum_{j=1}^{M} \phi(y_j),
-	\end{equation}
-	where $y_j \in Y_M \subset X$; $M<<N$, i.e. $Y_M$ is a small subset of the full points in the set $X$. Having defined $\hat{\mu}_N$ and $\hat{\nu}_M$, we can rewrite the MMD [ADD REFERENCE] as an RKHS norm $|| \mu_N \nu_M||_{\mathcal{H}}$.
+	Now, we can use random Fourier features evaluated at finite sample points to approximate the empirical estimates of the mean embeddings, for both $X_N$ (stream) and $P_M$ (local subset), where $P_M$ is a small subset of the full points in the set $X_N$, and use those to rewrite the MMD as an RKHS norm. 
 	
 	\textbf{Streaming subset selection}
-	[TO BE ADDED Petya]
+	
+	Our so-called reservoir will be $P_M$, which contains points drawn without replacement from $X_N$, representing our current approximation of the distribution of the first $n$ points, i.e. our prototypes. To summarize, the algorithm takes the form of a greedy optimization algorithm in which (1) a new candidate point $x_n$ is inserted into our set $P_M$, (2) an inner optimization problem is solved to decide whether to keep $x_n$, and if so, which $p_j$ it should replace. The details about the algorithm can be found in \cite{streaming} but it is worth emphasizing that a nearest-neighbor search is used to discard a single point of the subset $P_M \cup x_n$, where ${n = M+1, \ldots, N}$, which ensures the MMD is minimized. 
 	
 	
 	\section{Our Algorithms}
 	%%We will now describe several methods which compute criticisms online. 
-	We will now describe two algorithms that select both prototypes and criticisms in an online fashion. The idea is that, as a new data point becomes available, we would like to determine whether to add it to the set of prototypes, to the secriticisms or not. We want to maintain a fixed number of criticisms so if we do decide to include the new point then we need to exclude one of the existing criticisms.
-	The first $M$ values in the stream are considered as the starting set of \textit{prototypes} while the second set of $M$ points are treated as the initial set of \textit{criticism}. Each time a new data point $x_n$ is considered, the algorithm selects $M$ prototypes among the $M+1$ values available optimizing the objective function ( refer to equation of the greedy algorithm). This is done by starting from an empty set of prototypes and then looping over the available points. If the new data point $x_n$ is accepted as a prototype, the algorithm starts the evaluation of $x_{n+1}$. Conversely, if $x_n$ is rejected as a prototype is then tested as a potential criticism. Once done for the identification of prototypes, the algorithm selects $M$ criticisms among the $M+1$ values available. The new set of criticism is picked optimizing the function ( ref to $L(C)$ mentioned in the greedy algorithm). The regularization function (refer to greedy part) is considered. This algorithm is described in 
+	We will now describe two algorithms that select both prototypes and criticisms in an online fashion. The idea is that, as a new data point arrives, we would like to determine whether to add it to the set of prototypes and, if not, whether it should be added to the set of criticism. We want to maintain a fixed number of criticisms so if we do decide to include the new point then we need to exclude one of the existing criticisms. 
+	The first $M$ values in the stream are considered as the starting set of prototypes while the second set of $M$ points are treated as the initial set of criticism. Each time a new data point $x_n$ is considered, the algorithm selects $M$ prototypes among the $M+1$ values available. This is done by starting from an empty set of prototypes and then looping over the available points. If the new data point $x_n$ is accepted as a prototype, the algorithm starts the evaluation of $x_{n+1}$. Conversely, if $x_n$ is rejected as a prototype, is then tested as a potential criticism. Once done for the identification of prototypes, the algorithm selects $M$ criticisms among the $M+1$ values available. This algorithm is described in 
 	
 	\begin{algorithm}
 		\caption{Online Search}\label{online_greedy}
@@ -230,7 +222,10 @@
 	\end{algorithm}
 	
 	\subsection{Online Greedy}
-	We now introduce a sequential algorithm for selecting prototypes and criticism in an online fashion. The algorithm, which we will refer to as "Online Greedy" (OG), considers again the MMD as a measure of discrepancy between the samples and any selected subset. However, differently from \ref{greedy}, OG processes streaming data online selecting a subsets of size M for both prototypes and criticism.  Notice how, the main difference between the OG algorithm and the G algorithm, lies in the computation of the kernel matrix. Indeed, in the original greedy algorithm, the Gram matrix $K \in R^{NxN}$ where $K_{ij}=k(x_i,x_j)$ is computed for the overall set of $N$ observations which is available when running each step of the algorithm. In the online version of the algorithm, only $n \leq N$ observations are observed at each step. This implies that the subset of the Gram matrix, say $K_{subset}$, used at the first step is of dimension $2Mx2M$. Indeed, the first $2M$ observations are initially split in a set of $M$ prototypes and $M$ criticisms. We thus have a subset of $K_{subset}$ of dimension $Mx2M$ both for the prototypes, say $K_{prototypes}$,and the criticism, say $K_{criticism}$. As soon as a new observation becomes available, the dimension of c and $K_{criticism}$ increases to $(M+1)x(2M+1)$. The point is then tested to be a prototype or a criticism. Depending on the type of point the corresponding matrices $K_{prototypes}$ and $K_{criticism}$ will be modified so as to have on the rows the new set of prototypes and on the columns the observations collected so far. The number of columns for both $K_{prototypes}$ and $K_{criticism}$ will increase overtime incorporating the observations collected. The number of columns will stay constant to the $M$. At each step, a standard greedy algorithm will be performed using the relevant kernel matrices.  
+	the algorithm selects $M$ prototypes among the $M+1$ values available. This is done by starting from an empty set of prototypes and then looping over the available points. If the new data point $x_n$ is accepted as a prototype, the algorithm starts the evaluation of $x_{n+1}$. Conversely, if $x_n$ is rejected as a prototype is then tested as a potential criticism. Once done for the identification of prototypes, the algorithm selects $M$ criticisms among the $M+1$ values available. The new set of criticism is picked optimizing the function ( ref to $L(C)$ mentioned in the greedy algorithm). The regularization function (refer to greedy part) is considered. This algorithm is described in 
+	
+	
+	We now introduce a sequential version of the Greedy algorithm for selecting prototypes and criticism in an online fashion. The algorithm, which we will refer to as "Online Greedy" (OG), considers again the MMD as a measure of discrepancy between the samples and any selected subset. However, differently from \ref{greedy}, OG processes streaming data online selecting a subsets of size M for both prototypes and criticism.  Notice how, the main difference between the OG algorithm and the G algorithm, lies in the computation of the kernel matrix. Indeed, in the original greedy algorithm, the Gram matrix $K \in R^{NxN}$ where $K_{ij}=k(x_i,x_j)$ is computed for the overall set of $N$ observations which is available when running each step of the algorithm. In the online version of the algorithm, only $n \leq N$ observations are observed at each step. This implies that the subset of the Gram matrix, say $K_{subset}$, used at the first step is of dimension $2Mx2M$. Indeed, the first $2M$ observations are initially split in a set of $M$ prototypes and $M$ criticisms. We thus have a subset of $K_{subset}$ of dimension $Mx2M$ both for the prototypes, say $K_{prototypes}$,and the criticism, say $K_{criticism}$. As soon as a new observation becomes available, the dimension of c and $K_{criticism}$ increases to $(M+1)x(2M+1)$. The point is then tested to be a prototype or a criticism. Depending on the type of point the corresponding matrices $K_{prototypes}$ and $K_{criticism}$ will be modified so as to have on the rows the new set of prototypes and on the columns the observations collected so far. The number of columns for both $K_{prototypes}$ and $K_{criticism}$ will increase overtime incorporating the observations collected. The number of columns will stay constant to the $M$. At each step, a standard greedy algorithm will be performed using the relevant kernel matrices.  
 	
 	
 	\begin{algorithm}
@@ -314,6 +309,8 @@
 	
 	\section{Results}
 	
+	\subsection{Greedy Algorithm}
+	\subsection{Online Prototypes and Criticisms}
 	\begin{figure*}
 		\centering
 		\begin{subfigure}[b]{0.475\textwidth}
@@ -324,7 +321,7 @@
 			\label{fig:mean and std of net14}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}[b]{0.475\textwidth}  
+		\begin{subfigure}[b]{0.475\textwidth} 
 			\centering 
 			\includegraphics[width=\textwidth]{OriginalGaussian_20_2g_reg}
 			\caption[]%

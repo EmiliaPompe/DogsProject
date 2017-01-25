@@ -2,6 +2,10 @@
 \BOOKMARK [1][-]{section.2}{Theoretical background}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{The Greedy algorithm: combining prototypes with criticisms}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Streaming MMD Minimization}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Our Algorithms}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Online Greedy}{section.3}% 6
-\BOOKMARK [2][-]{subsection.3.2}{Faster Algorithm}{section.3}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Streaming MMD Minimization}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Our Algorithms}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Online Greedy}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Faster Algorithm}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Results}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Greedy Algorithm}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Online Prototypes and Criticisms}{section.4}% 11
